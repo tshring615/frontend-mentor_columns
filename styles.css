@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca:wght@700&display=swap');
+
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+*/
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan:  hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--very-light-gray);
+    font-size: 1rem;
+    font-family: "Lexend Deca", sans-serif;
+    min-height: 100vh;
+}
+
+/* Generic Customizations */
+
+main {
+    margin: 4rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+p {
+    color: var(--transparent-white);
+    line-height: 1.6rem;
+    margin-bottom: 5rem;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+}
+
+.sedans .button {
+    color: var(--bright-orange);
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.suvs .button {
+    color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury .button{
+    color: var(--very-dark-cyan);
+}
+
+.button {
+    padding: .8rem 1.5rem;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    border-radius: 2rem;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.button:hover {
+    color: var(--very-light-gray);
+    background-color: transparent;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    position: relative;
+    padding: 2.5rem;
+}
+
+ .button {
+    position: absolute;
+    left: 2.5rem;
+    bottom: 2.5rem;
+}
+
+
+@media (min-width: 950px) {
+  
+    main {
+        display: flex;
+        max-width: 1080px;
+     
+
+    } 
+
+    p {
+        margin-bottom: 8rem;
+    }
+}
+
